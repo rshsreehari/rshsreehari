@@ -16,17 +16,17 @@ The projects grew from there.
 
 ## 🚀 Featured Work
 
-### 🧩 [CORE — Distributed Code Review Platform](https://github.com/rshsreehari/coderev-platform)
+###  [CORE — Distributed Code Review Platform](https://github.com/rshsreehari/coderev-platform)
 An event-driven code review system deployed end to end on AWS. SHA-256 content hashing feeds a Redis cache layer, an **SQS-backed worker pool** processes analysis jobs asynchronously, and a **dead-letter queue with retry handling** recovers failures. Workers scale independently of the API.
 > **Result:** sub-2s responses on cache hits (60–70% hit rate), decoupled and horizontally scalable.
 > `Node.js` · `PostgreSQL (RDS)` · `Redis` · `AWS SQS / EC2` · `Docker`
 
-### 🛰️ [SpecPilot — AI-Powered API Documentation Evaluation Platform](https://github.com/rshsreehari/specpilot)
+###  [SpecPilot — AI-Powered API Documentation Evaluation Platform](https://github.com/rshsreehari/specpilot)
 Point it at **any OpenAPI 3.x spec** — URL or file — and it answers questions about that API, then **mechanically** checks every citation against the spec's own machine-readable definition. No LLM ever grades another LLM. Custom **BM25 + Reciprocal Rank Fusion** retrieval with per-provider indexing, an **MCP-compatible tool-calling agent**, and a mechanical evaluation harness that turns hallucination into a number instead of an impression.
 > **Result:** parameter hallucination cut from **33% → 12%** (agent vs. single-pass), measured across **446 endpoints** and an **80-question** evaluation suite spanning Stripe, GitHub, and OpenAI.
 > `Python` · `FastAPI` · `PostgreSQL + pgvector` · `MCP` · `RAG` · `React` · `Docker`
 
-### 🧠 [Assistive Communication System (RAG)](https://github.com/rshsreehari/llmaacworking)
+###  [Assistive Communication System (RAG)](https://github.com/rshsreehari/llmaacworking)
 A full-stack assistive-communication app. Two **fine-tuned FLAN-T5** models sit behind a **FAISS-backed RAG pipeline**, served through a Flask API with a React frontend.
 > **Result:** improved METEOR 2× and ROUGE-L 2.3× over a zero-shot baseline.
 > `Python` · `Flask` · `FAISS` · `FLAN-T5` · `React`
@@ -35,7 +35,7 @@ A full-stack assistive-communication app. Two **fine-tuned FLAN-T5** models sit 
 
 ## 🔨 Currently Building
 
-### 🔁 AssetLoop — Event-Driven Personal Obligations Platform *(in progress)*
+###  AssetLoop — Event-Driven Personal Obligations Platform *(in progress)*
 Turns receipts, bills, and subscription notices into structured obligations through an **idempotent extraction pipeline** with a **transactional outbox**, DLQ recovery, and scheduled reconciliation. Polyglot by design: a Python/FastAPI core with a **Java/Spring Boot ledger service**, a **Kafka** event backbone, a cited-source RAG assistant, and an **MCP access layer** that inherits the backend's auth and RBAC.
 > `Python (FastAPI)` · `Java (Spring Boot)` · `PostgreSQL + pgvector` · `Redis` · `Kafka` · `AWS` · `Terraform` · `OpenTelemetry`
 
